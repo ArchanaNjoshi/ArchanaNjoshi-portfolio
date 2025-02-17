@@ -121,3 +121,58 @@ a:hover {
 .text-justify {
   text-align: justify;
 }
+.large-text {
+  display: block;
+}
+
+.small-text {
+  display: none;
+}
+.xs-text {
+  display: none;
+}
+@media (max-width: 600px) {
+  .large-text {
+    display: none;
+  }
+
+  .small-text {
+    display: block;
+  }
+  .xs-text {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .large-text {
+    display: none;
+  }
+
+  .small-text {
+    display: none;
+  }
+  .xs-text {
+    display: block;
+  }
+}
+.social-icons {
+  position: fixed;
+  top: 50%; /* Ensures the icons are vertically centered */
+  right: 30px; /* You can adjust this for spacing from the right */
+  transform: translateY(-50%); /* Vertically center the icons */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 50; /* Make sure it stays on top of other content */
+}
+@media (max-width: 768px) {
+  .social-icons {
+    right: 20px; /* Space for mobile */
+    top: auto;
+    transform: translateY(0);
+  }
+}
+.content {
+  width: 75%; /* Or adjust it as needed */
+  margin-right: 100px; /* Ensures space for social icons */
+}

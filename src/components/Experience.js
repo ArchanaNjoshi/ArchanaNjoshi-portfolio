@@ -13,7 +13,10 @@ export default function Experience() {
                 <span className={styles.timelineDate}>{exp.period}</span>
                 <h3>{exp.title}</h3>
                 <p className={styles.company}>{exp.company}</p>
-                <p className="text-justify">{exp.description}</p>
+                <p className="large-text text-justify">{exp.description_large}</p>
+                <p className="small-text text-justify">{exp.description_short}</p>
+                <p className="xs-text text-justify">{exp.description_xs}</p>
+
               </div>
             </div>
           ))}
