@@ -34,16 +34,22 @@ export default function Hero() {
           <h1 className="text-2xl md:text-4xl font-semibold text-gray-900">
             {data.name}
           </h1>
-          <p className="text-gray-600 max-w-xl leading-relaxed text-lg mt-2">
-            {data.about_2}
+          <p className="large-text text-justify text-gray-600 max-w-xl leading-relaxed text-lg mt-2">
+            {data.about_full}
+          </p>
+          <p className="small-text text-justify text-gray-600 max-w-xl leading-relaxed text-lg mt-2">
+            {data.about_short}
+          </p>
+          <p className="xs-text text-justify text-gray-600 max-w-xl leading-relaxed text-lg mt-2">
+            {data.about_short}
           </p>
 
           {/* Call to Action Buttons */}
-          <div className="mt-6 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
+          <div className="content mt-6 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
             <Link
               href={data.socialLinks.sendMail}
                target="_blank" rel="noopener noreferrer"
-              className="text-justify bg-black text-white py-3 px-8 rounded-full text-base font-medium hover:bg-gray-800 transition-all shadow-md"
+              className="bg-black text-white py-3 px-8 rounded-full text-base font-medium hover:bg-gray-800 transition-all shadow-md"
             >
               Get in touch
             </Link>
@@ -58,7 +64,7 @@ export default function Hero() {
         </div>
 
         {/* Social Icons */}
-        <div className="absolute right-8 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4">
+        <div className="social-icons fixed right-8 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4">
           <Link href={data.socialLinks.github} target="_blank">
             <FaGithub className="text-gray-700 hover:text-black text-2xl transition-all" />
           </Link>
